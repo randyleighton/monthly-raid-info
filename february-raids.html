@@ -17,11 +17,17 @@
         .shadow { background: #ffebee !important; }
         .weakness { color: #d32f2f; font-weight: 500; }
         .resistance { color: #1976d2; }
-        .type-icon { font-size: 1.2em; margin-right: 3px; }
+        .type-icon { font-size: 1.2em; margin-right: 3px; cursor: help; }
         .rank1 { background: #4caf50; color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.85em; font-weight: bold; }
         .rank2 { background: #ff9800; color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.85em; }
         .rank3 { background: #9e9e9e; color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.85em; }
         @media (max-width: 768px) { table { font-size: 13px; } th, td { padding: 8px 6px; } .type-icon { font-size: 1.1em; } }
+
+        .legend { text-align: center; margin: 20px auto; max-width: 900px; }
+        .legend-table { margin: 0 auto; border-collapse: collapse; background: rgba(255,255,255,0.9); border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        .legend-table td { padding: 8px 12px; border-bottom: 1px solid #e0e0e0; }
+        .legend-table tr:nth-child(even) td { background: #f8fbff; }
+        .legend h3 { color: #667eea; margin-bottom: 10px; }
     </style>
 </head>
 <body>
@@ -30,6 +36,38 @@
         Full Mega recommendations with <strong>1-3 rankings</strong> (1=Meta, 2=Excellent, 3=Reliable). All times local, rotations at 10 AM.
     </p>
     
+    <!-- Type Legend -->
+    <div class="legend">
+        <h3>📋 Type Legend (hover icons for details)</h3>
+        <table class="legend-table">
+            <tr>
+                <td><span class="type-icon" title="Normal">⭕</span> Normal</td>
+                <td><span class="type-icon" title="Fighting">👊</span> Fighting</td>
+                <td><span class="type-icon" title="Flying">🕊️</span> Flying</td>
+                <td><span class="type-icon" title="Poison">☠️</span> Poison</td>
+                <td><span class="type-icon" title="Ground">🟤</span> Ground</td>
+                <td><span class="type-icon" title="Rock">🪨</span> Rock</td>
+                <td><span class="type-icon" title="Bug">🐛</span> Bug</td>
+            </tr>
+            <tr>
+                <td><span class="type-icon" title="Ghost">👻</span> Ghost</td>
+                <td><span class="type-icon" title="Steel">🔩</span> Steel</td>
+                <td><span class="type-icon" title="Fire">🔥</span> Fire</td>
+                <td><span class="type-icon" title="Water">💧</span> Water</td>
+                <td><span class="type-icon" title="Grass">🌱</span> Grass</td>
+                <td><span class="type-icon" title="Electric">⚡</span> Electric</td>
+                <td><span class="type-icon" title="Psychic">🧠</span> Psychic</td>
+            </tr>
+            <tr>
+                <td><span class="type-icon" title="Ice">❄️</span> Ice</td>
+                <td><span class="type-icon" title="Dragon">🐲</span> Dragon</td>
+                <td><span class="type-icon" title="Dark">🌑</span> Dark</td>
+                <td><span class="type-icon" title="Fairy">🧚</span> Fairy</td>
+                <td colspan="3"></td>
+            </tr>
+        </table>
+    </div>
+ 
     <table>
         <thead>
             <tr>
@@ -46,137 +84,137 @@
             <tr>
                 <td><strong>Tornadus (Incarnate)</strong></td>
                 <td>5★</td>
-                <td>🕊️ Flying</td>
-                <td class="weakness">🪨 Rock, ⚡ Electric, ❄️ Ice</td>
-                <td class="resistance">🌱 Grass, 🐛 Bug, 👊 Fighting; 🟤 Ground (immune)</td>
+                <td><span class="type-icon" title="Flying">🕊️</span> Flying</td>
+                <td class="weakness"><span class="type-icon" title="Rock">🪨</span> Rock, <span class="type-icon" title="Electric">⚡</span> Electric, <span class="type-icon" title="Ice">❄️</span> Ice</td>
+                <td class="resistance"><span class="type-icon" title="Grass">🌱</span> Grass, <span class="type-icon" title="Bug">🐛</span> Bug, <span class="type-icon" title="Fighting">👊</span> Fighting; <span class="type-icon" title="Ground">🟤</span> Ground (immune)</td>
                 <td>
-                    🪨 <span class="rank1">1</span> Mega Diancie, Mega Tyranitar<br>
-                    ⚡ <span class="rank1">1</span> Mega Manectric, Mega Ampharos<br>
-                    ⚡ <span class="rank2">2</span> Mega Electivire, Mega Zapdos<br>
-                    ❄️ <span class="rank1">1</span> Mega Glalie<br>
-                    ❄️ <span class="rank2">2</span> Mega Abomasnow, Mega Walrein
+                    <span class="type-icon" title="Rock">🪨</span> <span class="rank1">1</span> Mega Diancie, Mega Tyranitar<br>
+                    <span class="type-icon" title="Electric">⚡</span> <span class="rank1">1</span> Mega Manectric, Mega Ampharos<br>
+                    <span class="type-icon" title="Electric">⚡</span> <span class="rank2">2</span> Mega Electivire, Mega Zapdos<br>
+                    <span class="type-icon" title="Ice">❄️</span> <span class="rank1">1</span> Mega Glalie<br>
+                    <span class="type-icon" title="Ice">❄️</span> <span class="rank2">2</span> Mega Abomasnow, Mega Walrein
                 </td>
                 <td>Feb 4–16</td>
             </tr>
             <tr>
                 <td><strong>Dialga</strong></td>
                 <td>5★</td>
-                <td>🐲 Dragon/🔩 Steel</td>
-                <td class="weakness">👊 Fighting, 🟤 Ground</td>
-                <td class="resistance">🌱 Grass ☠️ Poison (2x); 🐛⚡🕊️⭕🧠🪨🔩💧</td>
+                <td><span class="type-icon" title="Dragon">🐲</span> Dragon/<span class="type-icon" title="Steel">🔩</span> Steel</td>
+                <td class="weakness"><span class="type-icon" title="Fighting">👊</span> Fighting, <span class="type-icon" title="Ground">🟤</span> Ground</td>
+                <td class="resistance"><span class="type-icon" title="Grass">🌱</span> Grass <span class="type-icon" title="Poison">☠️</span> Poison (2x); <span class="type-icon" title="Bug">🐛</span><span class="type-icon" title="Electric">⚡</span><span class="type-icon" title="Flying">🕊️</span><span class="type-icon" title="Normal">⭕</span><span class="type-icon" title="Psychic">🧠</span><span class="type-icon" title="Rock">🪨</span><span class="type-icon" title="Steel">🔩</span><span class="type-icon" title="Water">💧</span></td>
                 <td>
-                    👊 <span class="rank1">1</span> Mega Lucario, Mega Heracross<br>
-                    👊 <span class="rank2">2</span> Mega Conkeldurr, Mega Medicham<br>
-                    🟤 <span class="rank1">1</span> Mega Garchomp, Mega Swampert<br>
-                    🟤 <span class="rank2">2</span> Mega Camerupt
+                    <span class="type-icon" title="Fighting">👊</span> <span class="rank1">1</span> Mega Lucario, Mega Heracross<br>
+                    <span class="type-icon" title="Fighting">👊</span> <span class="rank2">2</span> Mega Conkeldurr, Mega Medicham<br>
+                    <span class="type-icon" title="Ground">🟤</span> <span class="rank1">1</span> Mega Garchomp, Mega Swampert<br>
+                    <span class="type-icon" title="Ground">🟤</span> <span class="rank2">2</span> Mega Camerupt
                 </td>
                 <td>Feb 4–16</td>
             </tr>
             <tr>
                 <td><strong>Palkia</strong></td>
                 <td>5★</td>
-                <td>💧 Water/🐲 Dragon</td>
-                <td class="weakness">🧚 Fairy, 🐲 Dragon</td>
-                <td class="resistance">🔥 Fire 💧 Water (2x); 🔩 Steel</td>
+                <td><span class="type-icon" title="Water">💧</span> Water/<span class="type-icon" title="Dragon">🐲</span> Dragon</td>
+                <td class="weakness"><span class="type-icon" title="Fairy">🧚</span> Fairy, <span class="type-icon" title="Dragon">🐲</span> Dragon</td>
+                <td class="resistance"><span class="type-icon" title="Fire">🔥</span> Fire <span class="type-icon" title="Water">💧</span> Water (2x); <span class="type-icon" title="Steel">🔩</span> Steel</td>
                 <td>
-                    🧚 <span class="rank1">1</span> Mega Gardevoir, Mega Altaria<br>
-                    🧚 <span class="rank2">2</span> Mega Mawile<br>
-                    🐲 <span class="rank1">1</span> Mega Rayquaza, Mega Salamence<br>
-                    🐲 <span class="rank2">2</span> Mega Latios, Mega Dragonite
+                    <span class="type-icon" title="Fairy">🧚</span> <span class="rank1">1</span> Mega Gardevoir, Mega Altaria<br>
+                    <span class="type-icon" title="Fairy">🧚</span> <span class="rank2">2</span> Mega Mawile<br>
+                    <span class="type-icon" title="Dragon">🐲</span> <span class="rank1">1</span> Mega Rayquaza, Mega Salamence<br>
+                    <span class="type-icon" title="Dragon">🐲</span> <span class="rank2">2</span> Mega Latios, Mega Dragonite
                 </td>
                 <td>Feb 4–16</td>
             </tr>
             <tr>
                 <td><strong>Solgaleo</strong></td>
                 <td>5★</td>
-                <td>🧠 Psychic/🔩 Steel</td>
-                <td class="weakness">🟤 Ground, 👻 Ghost, 🔥 Fire, 🌑 Dark</td>
-                <td class="resistance">☠️ Poison (immune); ⭕💧⚡🌱❄️🕊️🪨🐲🔩🧚🧠</td>
+                <td><span class="type-icon" title="Psychic">🧠</span> Psychic/<span class="type-icon" title="Steel">🔩</span> Steel</td>
+                <td class="weakness"><span class="type-icon" title="Ground">🟤</span> Ground, <span class="type-icon" title="Ghost">👻</span> Ghost, <span class="type-icon" title="Fire">🔥</span> Fire, <span class="type-icon" title="Dark">🌑</span> Dark</td>
+                <td class="resistance"><span class="type-icon" title="Poison">☠️</span> Poison (immune); <span class="type-icon" title="Normal">⭕</span><span class="type-icon" title="Water">💧</span><span class="type-icon" title="Electric">⚡</span><span class="type-icon" title="Grass">🌱</span><span class="type-icon" title="Ice">❄️</span><span class="type-icon" title="Flying">🕊️</span><span class="type-icon" title="Rock">🪨</span><span class="type-icon" title="Dragon">🐲</span><span class="type-icon" title="Steel">🔩</span><span class="type-icon" title="Fairy">🧚</span><span class="type-icon" title="Psychic">🧠</span></td>
                 <td>
-                    🟤 <span class="rank1">1</span> Mega Garchomp, Mega Swampert<br>
-                    👻 <span class="rank1">1</span> Mega Gengar, Mega Banette<br>
-                    👻 <span class="rank2">2</span> Mega Mimikyu<br>
-                    🔥 <span class="rank1">1</span> Mega Scizor<br>
-                    🌑 <span class="rank1">1</span> Mega Tyranitar
+                    <span class="type-icon" title="Ground">🟤</span> <span class="rank1">1</span> Mega Garchomp, Mega Swampert<br>
+                    <span class="type-icon" title="Ghost">👻</span> <span class="rank1">1</span> Mega Gengar, Mega Banette<br>
+                    <span class="type-icon" title="Ghost">👻</span> <span class="rank2">2</span> Mega Mimikyu<br>
+                    <span class="type-icon" title="Fire">🔥</span> <span class="rank1">1</span> Mega Scizor<br>
+                    <span class="type-icon" title="Dark">🌑</span> <span class="rank1">1</span> Mega Tyranitar
                 </td>
                 <td>Feb 16–21</td>
             </tr>
             <tr>
                 <td><strong>Lunala</strong></td>
                 <td>5★</td>
-                <td>🧠 Psychic/👻 Ghost</td>
-                <td class="weakness">🌑 Dark, 👻 Ghost</td>
-                <td class="resistance">👊 Fighting (3x), ⭕ Normal (2x); ☠️🧠</td>
+                <td><span class="type-icon" title="Psychic">🧠</span> Psychic/<span class="type-icon" title="Ghost">👻</span> Ghost</td>
+                <td class="weakness"><span class="type-icon" title="Dark">🌑</span> Dark, <span class="type-icon" title="Ghost">👻</span> Ghost</td>
+                <td class="resistance"><span class="type-icon" title="Fighting">👊</span> Fighting (3x), <span class="type-icon" title="Normal">⭕</span> Normal (2x); <span class="type-icon" title="Poison">☠️</span><span class="type-icon" title="Psychic">🧠</span></td>
                 <td>
-                    🌑 <span class="rank1">1</span> Mega Tyranitar, Mega Houndoom<br>
-                    🌑 <span class="rank2">2</span> Mega Absol<br>
-                    👻 <span class="rank1">1</span> Mega Gengar, Mega Banette<br>
-                    👻 <span class="rank2">2</span> Mega Mimikyu
+                    <span class="type-icon" title="Dark">🌑</span> <span class="rank1">1</span> Mega Tyranitar, Mega Houndoom<br>
+                    <span class="type-icon" title="Dark">🌑</span> <span class="rank2">2</span> Mega Absol<br>
+                    <span class="type-icon" title="Ghost">👻</span> <span class="rank1">1</span> Mega Gengar, Mega Banette<br>
+                    <span class="type-icon" title="Ghost">👻</span> <span class="rank2">2</span> Mega Mimikyu
                 </td>
                 <td>Feb 21–Mar 4</td>
             </tr>
             <tr class="shadow">
                 <td><strong>Shadow Regigigas</strong></td>
                 <td>5★ Shadow</td>
-                <td>⭕ Normal</td>
-                <td class="weakness">👊 Fighting</td>
-                <td class="resistance">👻 Ghost (immune)</td>
+                <td><span class="type-icon" title="Normal">⭕</span> Normal</td>
+                <td class="weakness"><span class="type-icon" title="Fighting">👊</span> Fighting</td>
+                <td class="resistance"><span class="type-icon" title="Ghost">👻</span> Ghost (immune)</td>
                 <td>
-                    👊 <span class="rank1">1</span> Mega Lucario<br>
-                    👊 <span class="rank2">2</span> Mega Heracross, Mega Conkeldurr<br>
-                    👊 <span class="rank3">3</span> Mega Medicham, Mega Blaziken
+                    <span class="type-icon" title="Fighting">👊</span> <span class="rank1">1</span> Mega Lucario<br>
+                    <span class="type-icon" title="Fighting">👊</span> <span class="rank2">2</span> Mega Heracross, Mega Conkeldurr<br>
+                    <span class="type-icon" title="Fighting">👊</span> <span class="rank3">3</span> Mega Medicham, Mega Blaziken
                 </td>
                 <td>Weekends Feb 1–Mar 4</td>
             </tr>
             <tr class="mega">
                 <td><strong>Mega Pidgeot</strong></td>
                 <td>Mega</td>
-                <td>⭕ Normal/🕊️ Flying</td>
-                <td class="weakness">🪨 Rock, ⚡ Electric, ❄️ Ice</td>
-                <td class="resistance">🟤 Ground 👻 Ghost (immune); 🌱🐛👊</td>
+                <td><span class="type-icon" title="Normal">⭕</span> Normal/<span class="type-icon" title="Flying">🕊️</span> Flying</td>
+                <td class="weakness"><span class="type-icon" title="Rock">🪨</span> Rock, <span class="type-icon" title="Electric">⚡</span> Electric, <span class="type-icon" title="Ice">❄️</span> Ice</td>
+                <td class="resistance"><span class="type-icon" title="Ground">🟤</span> Ground <span class="type-icon" title="Ghost">👻</span> Ghost (immune); <span class="type-icon" title="Grass">🌱</span><span class="type-icon" title="Bug">🐛</span><span class="type-icon" title="Fighting">👊</span></td>
                 <td>
-                    🪨 <span class="rank1">1</span> Mega Diancie, Mega Tyranitar<br>
-                    ⚡ <span class="rank1">1</span> Mega Manectric, Mega Ampharos<br>
-                    ❄️ <span class="rank1">1</span> Mega Glalie, Mega Abomasnow
+                    <span class="type-icon" title="Rock">🪨</span> <span class="rank1">1</span> Mega Diancie, Mega Tyranitar<br>
+                    <span class="type-icon" title="Electric">⚡</span> <span class="rank1">1</span> Mega Manectric, Mega Ampharos<br>
+                    <span class="type-icon" title="Ice">❄️</span> <span class="rank1">1</span> Mega Glalie, Mega Abomasnow
                 </td>
                 <td>Feb 4–16</td>
             </tr>
             <tr class="mega">
                 <td><strong>Mega Sableye</strong></td>
                 <td>Mega</td>
-                <td>🌑 Dark/👻 Ghost</td>
-                <td class="weakness">🧚 Fairy</td>
-                <td class="resistance">⭕ Normal 👊 Fighting ☠️ Poison 🧠 Psychic</td>
+                <td><span class="type-icon" title="Dark">🌑</span> Dark/<span class="type-icon" title="Ghost">👻</span> Ghost</td>
+                <td class="weakness"><span class="type-icon" title="Fairy">🧚</span> Fairy</td>
+                <td class="resistance"><span class="type-icon" title="Normal">⭕</span> Normal <span class="type-icon" title="Fighting">👊</span> Fighting <span class="type-icon" title="Poison">☠️</span> Poison <span class="type-icon" title="Psychic">🧠</span> Psychic</td>
                 <td>
-                    🧚 <span class="rank1">1</span> Mega Gardevoir<br>
-                    🧚 <span class="rank2">2</span> Mega Altaria, Mega Mawile<br>
-                    🧚 <span class="rank3">3</span> Mega Granbull
+                    <span class="type-icon" title="Fairy">🧚</span> <span class="rank1">1</span> Mega Gardevoir<br>
+                    <span class="type-icon" title="Fairy">🧚</span> <span class="rank2">2</span> Mega Altaria, Mega Mawile<br>
+                    <span class="type-icon" title="Fairy">🧚</span> <span class="rank3">3</span> Mega Granbull
                 </td>
                 <td>Feb 16–21</td>
             </tr>
             <tr class="mega">
                 <td><strong>Mega Absol</strong></td>
                 <td>Mega</td>
-                <td>🌑 Dark</td>
-                <td class="weakness">🧚 Fairy, 👊 Fighting, 🐛 Bug</td>
-                <td class="resistance">🌑 Dark 👻 Ghost 🧠 Psychic (2x)</td>
+                <td><span class="type-icon" title="Dark">🌑</span> Dark</td>
+                <td class="weakness"><span class="type-icon" title="Fairy">🧚</span> Fairy, <span class="type-icon" title="Fighting">👊</span> Fighting, <span class="type-icon" title="Bug">🐛</span> Bug</td>
+                <td class="resistance"><span class="type-icon" title="Dark">🌑</span> Dark <span class="type-icon" title="Ghost">👻</span> Ghost <span class="type-icon" title="Psychic">🧠</span> Psychic (2x)</td>
                 <td>
-                    🧚 <span class="rank1">1</span> Mega Gardevoir<br>
-                    👊 <span class="rank1">1</span> Mega Lucario, Mega Heracross<br>
-                    🐛 <span class="rank1">1</span> Mega Scizor, Mega Pinsir
+                    <span class="type-icon" title="Fairy">🧚</span> <span class="rank1">1</span> Mega Gardevoir<br>
+                    <span class="type-icon" title="Fighting">👊</span> <span class="rank1">1</span> Mega Lucario, Mega Heracross<br>
+                    <span class="type-icon" title="Bug">🐛</span> <span class="rank1">1</span> Mega Scizor, Mega Pinsir
                 </td>
                 <td>Feb 21–Mar 4</td>
             </tr>
             <tr class="mega">
                 <td><strong>Mega Ampharos</strong></td>
                 <td>Mega</td>
-                <td>⚡ Electric/🐲 Dragon</td>
-                <td class="weakness">🟤 Ground, 🐲 Dragon, 🧚 Fairy</td>
-                <td class="resistance">⚡ Electric 🔥 Fire 🌱 Grass 💧 Water; 🕊️ Flying 🔩 Steel</td>
+                <td><span class="type-icon" title="Electric">⚡</span> Electric/<span class="type-icon" title="Dragon">🐲</span> Dragon</td>
+                <td class="weakness"><span class="type-icon" title="Ground">🟤</span> Ground, <span class="type-icon" title="Dragon">🐲</span> Dragon, <span class="type-icon" title="Fairy">🧚</span> Fairy</td>
+                <td class="resistance"><span class="type-icon" title="Electric">⚡</span> Electric <span class="type-icon" title="Fire">🔥</span> Fire <span class="type-icon" title="Grass">🌱</span> Grass <span class="type-icon" title="Water">💧</span> Water; <span class="type-icon" title="Flying">🕊️</span> Flying <span class="type-icon" title="Steel">🔩</span> Steel</td>
                 <td>
-                    🟤 <span class="rank1">1</span> Mega Garchomp, Mega Swampert<br>
-                    🐲 <span class="rank1">1</span> Mega Rayquaza<br>
-                    🧚 <span class="rank1">1</span> Mega Gardevoir
+                    <span class="type-icon" title="Ground">🟤</span> <span class="rank1">1</span> Mega Garchomp, Mega Swampert<br>
+                    <span class="type-icon" title="Dragon">🐲</span> <span class="rank1">1</span> Mega Rayquaza<br>
+                    <span class="type-icon" title="Fairy">🧚</span> <span class="rank1">1</span> Mega Gardevoir
                 </td>
                 <td>Early Feb (pre-Feb 4)</td>
             </tr>
